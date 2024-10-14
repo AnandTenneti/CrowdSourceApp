@@ -37,42 +37,10 @@ public class Apptest extends BaseTest {
         ImageCategoriesPage imageCategories = new ImageCategoriesPage(driver);
         imageCategories.searchForImageCategory("cat");
         Thread.sleep(5000);
-        //TakesScreenshot ts = (TakesScreenshot)driver;
-       // File file = ts.getScreenshotAs(OutputType.FILE);
-       // FileUtils.copyFile(file, new File(System.getProperty("user.dir")+"/Screenshots/Image1" +
-         //       ".png"));
-       // String base64Code = ts.getScreenshotAs(OutputType.BASE64);
-       // byte[] byteArray = Base64.getDecoder().decode(base64Code);
-        //FileOutputStream fos = new FileOutputStream(new File(System.getProperty("user.dir")+
-       //         "/Screenshots/Image1" +
-         //              ".jpeg"));
-//        byte[] byteArray = ts.getScreenshotAs(OutputType.BYTES);
-//        FileOutputStream fos = new FileOutputStream(new File(System.getProperty("user.dir")+
-//                "/Screenshots/Image_bytes" +
-//                ".jpeg"));
-//        fos.write(byteArray);
-//        fos.close();
     }
 
     @Test(priority = 2)
     public void TC_2() throws Exception {
-        Thread.sleep(3000);
-        ScreenOrientation orientation = driver.getOrientation();
-        System.out.println("Current Orientation is " + orientation);
-        driver.rotate(ScreenOrientation.LANDSCAPE);
-        UserTasksPage tasksPage = new UserTasksPage(driver);
-        tasksPage.clickOnGetStartedButton();
-        Thread.sleep(3000);
-        tasksPage.clickOnImageLabelVerificationTile();
-        Thread.sleep(3000);
-        ImageCategoriesPage imageCategories = new ImageCategoriesPage(driver);
-        imageCategories.searchForImageCategory("cats");
-        Thread.sleep(5000);
-
-    }
-
-    @Test(priority = 3)
-    public void TC_3() throws Exception {
         Thread.sleep(3000);
         UserTasksPage tasksPage = new UserTasksPage(driver);
         tasksPage.clickOnGetStartedButton();
@@ -84,8 +52,8 @@ public class Apptest extends BaseTest {
         Thread.sleep(3000);
     }
 
-    @Test(priority = 4)
-    public void TC_4() throws Exception {
+    @Test(priority = 3)
+    public void TC_3() throws Exception {
         Thread.sleep(3000);
         UserTasksPage tasksPage = new UserTasksPage(driver);
         tasksPage.clickOnGetStartedButton();
@@ -118,8 +86,8 @@ public class Apptest extends BaseTest {
         Assert.assertEquals(submittedContributionsCount + 1, updated_submittedContributionsCount, "not Incremented by 1");
     }
 
-    @Test(priority = 5)
-    public void TC_5() throws Exception {
+    @Test(priority = 4)
+    public void TC_4() throws Exception {
         Thread.sleep(3000);
         UserTasksPage tasksPage = new UserTasksPage(driver);
         wait.until(ExpectedConditions.visibilityOf(tasksPage.getButtonDisplay()));
@@ -130,37 +98,19 @@ public class Apptest extends BaseTest {
         tasksPage.clickOnGotitButton();
         Thread.sleep(3000);
     }
-
-    /*** Data Provider Tests
-     *
-     * @param category
-     * @throws Exception
-     */
-
-    @Test(priority = 6, dataProvider = "categoriesTestData", dataProviderClass = DataSupplier.class)
-    public void TC_6(String category) throws Exception {
-        Thread.sleep(3000);
-        UserTasksPage tasksPage = new UserTasksPage(driver);
-        wait.until(ExpectedConditions.visibilityOf(tasksPage.getButtonDisplay()));
-        tasksPage.clickOnGetStartedButton();
-        Thread.sleep(3000);
-        tasksPage.clickOnImageLabelVerificationTile();
-        Thread.sleep(3000);
-        ImageCategoriesPage imageCategories = new ImageCategoriesPage(driver);
-        imageCategories.searchForImageCategory(category);
-        Thread.sleep(5000);
-
-    }
-
-    @Test(priority = 7, dataProvider = "tabsTestData", dataProviderClass = DataSupplier.class)
-    public void TC_7(String tab) throws InterruptedException {
-        Thread.sleep(3000);
-        UserTasksPage tasksPage = new UserTasksPage(driver);
-        wait.until(ExpectedConditions.visibilityOf(tasksPage.getButtonDisplay()));
-        Thread.sleep(3000);
-        tasksPage.clickOnGetStartedButton();
-        Thread.sleep(3000);
-        tasksPage.longPress(tab);
-        Thread.sleep(3000);
-    }
 }
+//TakesScreenshot ts = (TakesScreenshot)driver;
+// File file = ts.getScreenshotAs(OutputType.FILE);
+// FileUtils.copyFile(file, new File(System.getProperty("user.dir")+"/Screenshots/Image1" +
+//       ".png"));
+// String base64Code = ts.getScreenshotAs(OutputType.BASE64);
+// byte[] byteArray = Base64.getDecoder().decode(base64Code);
+//FileOutputStream fos = new FileOutputStream(new File(System.getProperty("user.dir")+
+//         "/Screenshots/Image1" +
+//              ".jpeg"));
+//        byte[] byteArray = ts.getScreenshotAs(OutputType.BYTES);
+//        FileOutputStream fos = new FileOutputStream(new File(System.getProperty("user.dir")+
+//                "/Screenshots/Image_bytes" +
+//                ".jpeg"));
+//        fos.write(byteArray);
+//        fos.close();
