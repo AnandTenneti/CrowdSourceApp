@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+<!--    <listeners>-->
+<!--        <listener class-name="com.crowdsource.utils.TestListenerClass">-->
+<!--        </listener>
+    </listeners>-->
+    <test verbose="2" preserve-order="true" name="CrowdSourceApp_test1">
+<!--        <groups>-->
+<!--            <define name="dailybuild">-->
+<!--                <include name="functional"/>-->
+<!--                <include name="regression"/>-->
+<!--            </define>-->
+<!--            <run>-->
+<!--                <include name="dailybuild"/>-->
+<!--            </run>-->
+<!--        </groups>-->
+        <classes>
+            <!--   <class name="com.crowdsource.tests.Apptest">
+                               <methods>
+                                   <include name="TC_1"/>
+                                   <exclude name="TC_2"/>
+                                   <include name="TC_3"/>
+                                   <exclude name="TC_4"/>
+                               </methods>
+                           </class>
+               <class name="com.crowdsource.tests.Glidetypetest"/>-->
+            <!--                <methods>-->
+            <!--                    <exclude name="TC_1"/>-->
+            <!--                    <include name="TC_2"/>-->
+            <!--                </methods>-->
+            <!--            </class>-->
+            <class name="com.crowdsource.tests.Misctest">
+                <methods>
+                    <include name="test_screenOrientation"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="CrowdSourceApp_test2">
+            <!--                <methods>-->
+            <!--                    <include name="test_screenOrientation"/>-->
+            <!--                </methods>-->
+            <!--            </class>-->
+        <classes>
+            <class name="com.crowdsource.tests.UserTaskstest">
+                <methods>
+                    <include name="TC_4"/>
+                    <include name="TC_5"/>
+                    <include name="TC_9"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+            <!--            <class name="com.crowdsource.tests.LeaderBoardTests">-->
+            <!--                <methods>-->
+            <!--                    <include name="test_joinAndLeaveLeaderBoards"/>-->
+            <!--                    <include name="TC_1"/>-->
+            <!--                </methods>-->
+            <!-- </class>-->
+    <test verbose="2" preserve-order="true" name="CrowdSourceApp_test3">
+        <classes>
+            <class name="com.crowdsource.tests.TransValidationTaskTest">
+                <methods>
+                    <include name="test_submitTranslationValidation"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>
