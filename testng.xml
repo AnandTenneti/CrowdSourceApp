@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <test verbose="2" preserve-order="true" name="CrowdSourceApp">
+        <groups>
+            <define name="dailybuild">
+                <include name="functional"/>
+                <include name="regression"/>
+            </define>
+            <run>
+                <include name="dailybuild"/>
+            </run>
+        </groups>
+        <classes>
+           <!-- <class name="com.crowdsource.tests.Apptest"/>-->
+<!--                <methods>-->
+<!--                    <include name="TC_1"/>-->
+<!--                    <include name="TC_2"/>-->
+<!--                    <include name="TC_3"/>-->
+<!--                    <include name="TC_4"/>-->
+<!--                    <include name="TC_5"/>-->
+<!--                    <include name="TC_6"/>-->
+<!--                    <include name="TC_7"/>-->
+<!--                </methods></class>
+           <class name="com.crowdsource.tests.Glidetypetest">-->
+<!--                <methods>
+                   <include name="TC_1"/>-->
+<!--                    <include name="TC_2"/>-->
+<!--                </methods>
+          </class>
+            <class name="com.crowdsource.tests.LeaderBoardTests"/>-->
+<!--                <methods>-->
+<!--                    <include name="TC_10"/>-->
+<!--                    <include name="TC_11"/>-->
+<!--                </methods></class>-->
+            <class name="com.crowdsource.tests.UserTaskstest"/>
+            <class name="com.crowdsource.tests.TransValidationTaskTest"/>
+            <class name="com.crowdsource.tests.Misctest"/>
+        </classes>
+    </test>
+</suite>
